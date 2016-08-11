@@ -15,8 +15,23 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<!-- Footer Menu -->
-		<div id="footer-menu">
-			<?php wp_nav_menu( array('menu' => 'menu-footer', 'theme_location' => 'Footer')); ?>
+		<div id="social">
+			<?php if ( has_nav_menu( 'social' ) ) {
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'social',
+						'container'       => 'div',
+						'container_id'    => 'socialmenu',
+						'container_class' => 'menu',
+						'menu_id'         => 'menu-social-items',
+						'menu_class'      => 'menu-items',
+						'depth'           => 1,
+						'link_before'     => '<span class="screen-reader-text">',
+						'link_after'      => '</span>',
+						'fallback_cb'     => '',
+					)
+				);
+			} ?>
 		</div> <!-- End Footer Menu -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shafi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shafi' ), 'WordPress' ); ?></a>

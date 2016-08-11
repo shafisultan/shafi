@@ -41,6 +41,7 @@ function shafi_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'thumb', 600, 600, true ); //300 pixels wide (and unlimited height)
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -107,6 +108,7 @@ function shafi_scripts() {
 	wp_enqueue_script( 'shafi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'shafi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font/css/font-awesome.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -145,6 +147,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 function add_google_fonts() {
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Indie+Flower' );
+
 	}
 	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
@@ -152,8 +155,9 @@ function add_google_fonts() {
 	* Secondary menu that appear in the footer
 	*/
 	register_nav_menus( array(
-	 'secondary' => __( 'Footer Menu', 'Footer Menu'),
+	 'social' => __( 'Social Menu', 'Social Menu' ),
 	) );
+
 
 	/**
 		* Trying to add thumnail images to post and function as links to them

@@ -653,15 +653,14 @@ a:active {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text {
+/* .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
 }
-
-.screen-reader-text:focus {
+ .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -679,7 +678,7 @@ a:active {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
-}
+/* } */
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
@@ -940,13 +939,13 @@ object {
 	background-color: green;
 	padding-top: 1em;
 }
-#footer-menu ul {
+#social ul {
 	list-style-type: none;
 	float: left;
 	margin-left: auto;
 	padding-left: 1em;
 }
-#footer-menu ul li {
+#social ul li {
 	display: inline-block;
 	float: left;
 	padding-right: 2em;
@@ -955,4 +954,49 @@ object {
 .site-info {
 	float: right;
 	padding-right: 1em;
+}
+#social li a{
+	display:block;
+}
+#social li a:before {
+	content:        "";
+	display:        inline-block;
+	padding:        0 4px;
+	font-family:    "FontAwesome";
+	font-size:      16px;
+	vertical-align: top;
+		-webkit-font-smoothing: antialiased;
+}
+#social li a:before:hover{
+	 color: #C3C3C3;
+}
+/* #social li a[href*="facebook.com"]:before{
+	content:'\f09a';
+}
+#social li a[href*="twitter.com"]:before{
+	content:'\f099';
+}
+#social li a[href*="instagram.com"]:before{
+	content:'\f16d';
+}
+
+#social li a[href*="linkedin.com"]:before{
+	content:'\f0e1';
+} */
+
+/* #primary {
+	float:left;
+	margin-bottom:2em;
+	width: 26.6667%;
+}
+#primary aside {
+	width: inherit;
+} */
+.blog article {
+	float: left;
+	margin: 2em;
+	width: 42%;
+}
+.blog article aside {
+	width: inherit;
 }
