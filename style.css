@@ -353,7 +353,8 @@ html {
 }
 
 body {
-	background: #d5d5db; /* Fallback for when there is no custom background color defined. */
+	background-image: url('img/toronto.jpg'); /* Fallback for when there is no custom background color defined.
+	This an image I took several years ago. */
 }
 
 blockquote:before,
@@ -904,9 +905,21 @@ object {
 ## Changes added or edits made by myself.
 --------------------------------------------------------------*/
 #page {
-	background-color: pink;
 	width: 59.375em;
 	margin: auto;
+}
+#masthead {
+	background: #80c9f6;
+	margin: 2em;
+}
+#content {
+	background: #80c9f6;
+	margin: 2em;
+	padding: 1em;
+}
+#colophon {
+	background: #80c9f6;
+	padding-top: 1em;
 }
 
 .site-branding {
@@ -931,14 +944,6 @@ object {
 	font-family: 'Indie Flower', cursive;
 }
 
-#content {
-	padding: 1em;
-}
-
-#colophon {
-	background-color: green;
-	padding-top: 1em;
-}
 #social ul {
 	list-style-type: none;
 	float: left;
@@ -996,7 +1001,13 @@ object {
 	float: left;
 	margin: 2em;
 	width: 42%;
+	background-color: white;
+	text-align: center;
+	/*	clear: both; - This is the be used whe optimizing for mobile use */
 }
 .blog article aside {
 	width: inherit;
+}
+article p {
+
 }
