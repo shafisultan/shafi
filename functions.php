@@ -158,6 +158,7 @@ function add_google_fonts() {
 	 'social' => __( 'Social Menu', 'Social Menu' ),
 	) );
 
+	require get_stylesheet_directory() . '/inc/options.php';
 
 	/**
 		* Trying to add thumnail images to post and function as links to them
