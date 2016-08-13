@@ -953,7 +953,7 @@ object {
 #social ul li {
 	display: inline-block;
 	float: left;
-	padding-right: 2em;
+	padding-right: 1em;
 }
 
 .site-info {
