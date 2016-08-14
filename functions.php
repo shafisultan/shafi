@@ -146,8 +146,9 @@ require get_template_directory() . '/inc/jetpack.php';
  * Reference: http://www.wpbeginner.com/wp-themes/how-add-google-web-fonts-wordpress-themes/
  */
 function add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Indie+Flower' );
-
+	wp_enqueue_style( 'google-fonts');
+	wp_register_style( 'indie-fonts','https://fonts.googleapis.com/css?family=Indie+Flower' );
+	wp_register_style( 'monoton-font', 'https://fonts.googleapis.com/css?family=Monoton' );
 	}
 	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 

@@ -46,6 +46,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -900,7 +902,6 @@ object {
 	display: block;
 }
 
-
 /*--------------------------------------------------------------
 ## Changes added or edits made by myself.
 --------------------------------------------------------------*/
@@ -909,30 +910,22 @@ object {
 	margin: auto;
 }
 #masthead {
-	background: #80c9f6;
+	background: #83A7BC;
 	margin: 2em;
 }
 #content {
-	background: #80c9f6;
+	background: #83A7BC;
 	margin: 2em;
 	padding: 1em;
 }
 #colophon {
-	background: #80c9f6;
+	background: #83A7BC;
 	padding-top: 1em;
 }
 
-.site-branding {
-	text-align: center;
-	width: 40em;
-	max-width: 50%;
-	float: left;
-	padding: 3em 2em 3em 3em;
-}
-
 .site-title {
-	font-size: 2.5em;
-	font-weight: bold;
+	font-family: 'Monoton', cursive;
+	font-size: 2.2em;
 	margin-bottom: 0;
 	text-align: left;
 }
@@ -1008,6 +1001,69 @@ object {
 .blog article aside {
 	width: inherit;
 }
-article p {
 
+/*--------------------------------------------------------------
+## Edits for Responsiveness
+--------------------------------------------------------------*/
+#page {
+	margin: 3em auto;
+	max-width: 960px;
+	position: relative;
+	width: 90%;
 }
+#content {
+  position: relative;
+	margin: 0.75em 0 3em; /*12px/ 16px 48px / 16px */
+}
+#main {
+  float: left;
+  padding: 2em;
+	max-width: 100%;
+}
+
+/* responsiveness for menu to adjust to different screen sizes */
+
+#site-navigation {
+	height: 100%; /*36px / 16px*/
+	line-height: 2.25em;
+  position: relative;
+	margin: 0.75em 0 3em; /*12px/ 16px 48px / 16px */
+	text-align: center;
+  width: 100%;
+  padding-top: 14px;
+}
+#site-navigation ul {
+	list-style-type: none;
+	margin: auto;
+	width: auto;
+}
+#site-navigation ul li {
+	display: inline-block;
+}
+#site-navigation ul li a a:hover {
+	color: #FFFFFF;
+	font-weight: normal;
+	padding: 0.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#site-navigation a:hover {
+  color: #f2add3;
+}
+.site-branding {
+	text-align: center;
+	width: 40em;
+	max-width: 50%;
+	float: left;
+	padding: 3em 2em 3em 3em;
+}
+
+@media only screen and (max-width: 480px){
+	.blog article {
+		float: left;
+		width: 100%;
+		padding: 0;
+		background-color: white;
+		text-align: center;
+		/*	clear: both; - This is the be used whe optimizing for mobile use */
+	}
