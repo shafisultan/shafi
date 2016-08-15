@@ -104,6 +104,10 @@ add_action( 'widgets_init', 'shafi_widgets_init' );
  */
 function shafi_scripts() {
 	wp_enqueue_style( 'shafi-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'colourpage', get_stylesheet_uri() . '/inc/css/style-blue.css');
+
+	wp_enqueue_style( 'indie-fonts','https://fonts.googleapis.com/css?family=Indie+Flower|Monoton' );
+	wp_enqueue_style( 'monoton-font', 'https://fonts.googleapis.com/css?family=Monoton' );
 
 	wp_enqueue_script( 'shafi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -145,12 +149,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Enqueuing Google Fonts
  * Reference: http://www.wpbeginner.com/wp-themes/how-add-google-web-fonts-wordpress-themes/
  */
-function add_google_fonts() {
-	wp_enqueue_style( 'google-fonts');
-	wp_register_style( 'indie-fonts','https://fonts.googleapis.com/css?family=Indie+Flower' );
-	wp_register_style( 'monoton-font', 'https://fonts.googleapis.com/css?family=Monoton' );
-	}
-	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+	//add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 /**
 	* Secondary menu that appear in the footer

@@ -32,6 +32,14 @@
 					)
 				);
 			} ?>
+			<?php $options = get_option( 'options_settings' );
+			echo $options['text_field'] . '<br />';
+			if (isset($options['checkbox_field']) == 'on'){
+				echo $options['/inc/css/style-blue.css'] . '<br />';
+			} else { echo 'off <br />'; }
+			echo $options['radio_field'] . '<br />';
+			echo $options['textarea_field'] . '<br />';
+			echo $options['select_field']; ?>
 		</div> <!-- End Footer Menu -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shafi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shafi' ), 'WordPress' ); ?></a>
