@@ -1060,6 +1060,13 @@ object {
 	float: left;
 	padding: 3em 2em 3em 3em;
 }
+.project-posts {
+	float: left;
+	margin: 2em;
+	width: 26%;
+	background-color: white;
+	text-align: center;
+}
 
 @media only screen and (max-width: 800px){
 

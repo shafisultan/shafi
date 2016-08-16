@@ -41,7 +41,7 @@ function shafi_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'thumb', 600, 600, true ); //300 pixels wide (and unlimited height)
+	add_image_size( 'thumb', 600, 600, true ); //600 pixels wide (and unlimited height)
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
