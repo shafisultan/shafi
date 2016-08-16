@@ -1062,16 +1062,20 @@ object {
 }
 
 @media only screen and (max-width: 800px){
-	.blog article {
-		float: left;
-		width: 100%;
-		padding: 0;
-		background-color: white;
-		text-align: center;
-		/*	clear: both; - This is the be used whe optimizing for tablets */
-	}
+
 	#site-navigation {
 	  position: absolute;
+	}
+	.blog article {
+		float: left;
+		margin: 2em;
+		width: 30%;
+		background-color: white;
+		text-align: center;
+		/*	clear: both; - This is the be used whe optimizing for mobile use */
+	}
+	.blog article aside {
+		width: inherit;
 	}
 
 @media only screen and (max-width: 480px){
