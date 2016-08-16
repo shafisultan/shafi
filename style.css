@@ -355,7 +355,7 @@ html {
 }
 
 body {
-	background-image: url('img/toronto.jpg'); /* Fallback for when there is no custom background color defined.
+	background-image: url('img/tdot.jpg'); /* Fallback for when there is no custom background color defined.
 	This an image I took several years ago. */
 }
 
@@ -1030,7 +1030,7 @@ object {
 	height: 100%; /*36px / 16px*/
 	line-height: 2.25em;
   position: relative;
-	margin: 0.75em 0 3em; /*12px/ 16px 48px / 16px */
+	margin: 0.75em 0 1em; /*12px/ 16px 48px / 16px */
 	text-align: center;
   width: 100%;
   padding-top: 14px;
@@ -1060,6 +1060,19 @@ object {
 	float: left;
 	padding: 3em 2em 3em 3em;
 }
+
+@media only screen and (max-width: 800px){
+	.blog article {
+		float: left;
+		width: 100%;
+		padding: 0;
+		background-color: white;
+		text-align: center;
+		/*	clear: both; - This is the be used whe optimizing for tablets */
+	}
+	#site-navigation {
+	  position: absolute;
+	}
 
 @media only screen and (max-width: 480px){
 	.blog article {
