@@ -1060,19 +1060,17 @@ object {
 	float: left;
 	padding: 3em 2em 3em 3em;
 }
-.project-posts {
+.project-posts { /* Styles for the homepage customization */
 	float: left;
-	margin: 2em;
-	width: 26%;
-	background-color: white;
-	text-align: center;
+	margin: 1em;
+	padding-left: 1em;
+	width: 19%;
+	text-align: justify;
 }
 
+/* 
 @media only screen and (max-width: 800px){
 
-	#site-navigation {
-	  position: absolute;
-	}
 	.blog article {
 		float: left;
 		margin: 2em;

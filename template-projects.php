@@ -28,7 +28,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+<H2>Latest Projects</h2>
 	<?php
 				//function to show 5 posts from one specific category. Category name: Projects
 				$args = array('showposts' => 5, 'category_name' => 'Projects');
@@ -38,7 +38,6 @@ get_header(); ?>
 				//	WP Query to show posts on this specific pag
 				if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 				?>
-				<H2>Latest Projects</h2>
 				<div class="project-posts">
 				<?php
 				if ( has_post_thumbnail()){ the_post_thumbnail(); }
