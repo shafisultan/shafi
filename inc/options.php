@@ -22,7 +22,7 @@ function settings_init() {
 
 	add_settings_field(
 		'radio_field',
-		'Options for the Background of the Header',
+		'Options for the Background colour of the Header',
 		'radio_field_render',
 		'theme_options',
 		'options_page_section'

@@ -41,13 +41,12 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <H2>Latest Projects</h2>
 	<?php
-				//function to show 5 posts from one specific category. Category name: Projects
-				$args = array('showposts' => 5, 'category_name' => 'Projects');
+				//custom Quear to show 4 posts from one specific category (Projects) on the static homepage of my site.
+				$args = array('showposts' => 4, 'category_name' => 'Projects');
 				$my_query = new WP_Query($args);
 				?>
 				<?php
