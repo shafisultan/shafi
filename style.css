@@ -1068,27 +1068,28 @@ object {
 	text-align: justify;
 }
 
-/*
-@media only screen and (max-width: 800px){
+
+@media only screen and (max-width: 900px){
 
 	.blog article {
 		float: left;
 		margin: 2em;
-		width: 30%;
+		width: 40%;
 		background-color: white;
 		text-align: center;
 		/*	clear: both; - This is the be used whe optimizing for mobile use */
 	}
 	.blog article aside {
 		width: inherit;
+		position: relative;
 	}
 
 @media only screen and (max-width: 480px){
-	.blog article {
+	.project-posts {
 		float: left;
 		width: 100%;
 		padding: 0;
 		background-color: white;
 		text-align: center;
-		/*	clear: both; - This is the be used whe optimizing for mobile use */
+		clear: both; - This is the be used whe optimizing for mobile use */
 	}

@@ -46,20 +46,17 @@ get_header(); ?>
 <H2>Latest Projects</h2>
 	<?php
 				//custom Quear to show 4 posts from one specific category (Projects) on the static homepage of my site.
-				$args = array('showposts' => 4, 'category_name' => 'Projects');
-				$my_query = new WP_Query($args);
-				?>
-				<?php
-				//	WP Query to show posts on this specific pag
+			$args = array('showposts' => 4, 'category_name' => 'Projects');
+				$my_query = new WP_Query($args); ?>
+			<?php //	WP Query to show posts on this static homepage
 				if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 				?>
-				<div class="project-posts">
+			<div class="project-posts">
 				<?php
-				if ( has_post_thumbnail()){ the_post_thumbnail(); }
-				the_excerpt(); //displays excerpts
-					?>
-				</div>
-				<?php endwhile; endif; wp_reset_query(); ?>
+			if ( has_post_thumbnail()){ the_post_thumbnail(); }
+				the_excerpt(); //displays excerpts ?>
+			</div>
+			<?php endwhile; endif; wp_reset_query(); ?>
 
 <?php
 get_sidebar();
