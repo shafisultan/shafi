@@ -108,6 +108,10 @@ function shafi_scripts() {
 
 	wp_enqueue_style( 'indie-fonts','https://fonts.googleapis.com/css?family=Indie+Flower|Monoton' );
 	wp_enqueue_style( 'monoton-font', 'https://fonts.googleapis.com/css?family=Monoton' );
+	wp_enqueue_style( 'raleway-font', 'https://fonts.googleapis.com/css?family=Raleway' );
+	wp_enqueue_style( 'londrina-font', 'https://fonts.googleapis.com/css?family=Londrina+Outline' );
+	wp_enqueue_style( 'amatic-font', 'https://fonts.googleapis.com/css?family=Amatic+SC' );
+
 
 	wp_enqueue_script( 'shafi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

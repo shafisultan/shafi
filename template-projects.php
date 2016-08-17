@@ -9,6 +9,21 @@
  */
 
 get_header(); ?>
+<?php $options=get_option( 'options_settings' ); ?>
+		<!-- Custom style from options page -->
+		<style>
+		p {
+				 font-size: <?php echo $options['select_field']; ?>
+		 }
+		</style>
+
+		<?php $options=get_option( 'options_settings' ); ?>
+				<!-- Custom style from options page -->
+				<style>
+				p {
+						 font-family: <?php echo $options['radio2_field']; ?>
+				 }
+				</style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -25,6 +40,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

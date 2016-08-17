@@ -45,6 +45,14 @@ function settings_init() {
 	);
 
 	add_settings_field(
+		'radio2_field',
+		'Choose an option',
+		'radio2_field_render',
+		'theme_options',
+		'options_page_section'
+	);
+
+	add_settings_field(
 		'textarea_field',
 		'Enter content in the textarea',
 		'textarea_field_render',
@@ -78,11 +86,20 @@ function settings_init() {
 	function radio_field_render() {
 		$options = get_option( 'options_settings' );
 		?>
-		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 1 ); ?> value="1" /> <label>Option One</label><br />
-		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 2 ); ?> value="2" /> <label>Option Two</label><br />
-		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 3 ); ?> value="3" /> <label>Option Three</label>
+		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 1 ); ?> value="#00CDCD" /> <label>Tiffany Blue</label><br />
+		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 2 ); ?> value="#B7B5E7" /> <label>Grape</label><br />
+		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 3 ); ?> value="#E99CCE" /> <label>Kate Pink</label>
 		<?php
 	}
+	function radio2_field_render() {
+		$options = get_option( 'options_settings' );
+		?>
+		<input type="radio" name="options_settings[radio2_field]" <?php if (isset($options['radio2_field'])) checked( $options['radio2_field'], 1 ); ?> value="'Raleway', sans-serif;" /> <label>Raleway</label><br />
+		<input type="radio" name="options_settings[radio2_field]" <?php if (isset($options['radio2_field'])) checked( $options['radio2_field'], 2 ); ?> value="'Londrina Outline', cursive;" /> <label>Londrina Outline</label><br />
+		<input type="radio" name="options_settings[radio2_field]" <?php if (isset($options['radio2_field'])) checked( $options['radio2_field'], 3 ); ?> value="'Amatic SC', cursive;" /> <label>Amatic</label>
+		<?php
+	}
+
 
 	function textarea_field_render() {
 		$options = get_option( 'options_settings' );
@@ -95,9 +112,9 @@ function settings_init() {
 		$options = get_option( 'options_settings' );
 		?>
 		<select name="options_settings[select_field]">
-			<option value="1" <?php if (isset($options['select_field'])) selected( $options['select_field'], 1 ); ?>>Option 1</option>
-			<option value="2" <?php if (isset($options['select_field'])) selected( $options['select_field'], 2 ); ?>>Option 2</option>
-			<option value="2" <?php if (isset($options['select_field'])) selected( $options['select_field'], 3 ); ?>>Option 3</option>
+			<option value="3em" <?php if (isset($options['select_field'])) selected( $options['select_field'], 1 ); ?>>Big size font</option>
+			<option value="2em" <?php if (isset($options['select_field'])) selected( $options['select_field'], 2 ); ?>>Medium size font</option>
+			<option value="1em" <?php if (isset($options['select_field'])) selected( $options['select_field'], 3 ); ?>>Small size font</option>
 		</select>
 	<?php
 	}

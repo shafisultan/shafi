@@ -17,6 +17,15 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<?php $options=get_option( 'options_settings' ); ?>
+<?php wp_head(); ?>
+    <!-- Custom style from options page -->
+    <style>
+        #masthead {
+	       background-color: <?php echo $options['radio_field']; ?>
+        }
+    </style>
+
 <?php wp_head(); ?>
 </head>
 
