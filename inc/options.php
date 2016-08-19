@@ -1,10 +1,9 @@
 <?php
-
+/* Reference for this code is CCT460 lectrue on Options page. */
 function add_submenu() {
 		add_submenu_page( 'themes.php', 'My Super Awesome Options Page', 'Theme Options', 'manage_options', 'theme_options', 'my_theme_options_page');
 	}
 add_action( 'admin_menu', 'add_submenu' );
-
 
 function settings_init() {
 	register_setting( 'theme_options', 'options_settings' );
@@ -20,7 +19,7 @@ function settings_init() {
 		echo 'A description and detail about the section.';
 	}
 
-	add_settings_field(
+	add_settings_field( // A custom field to change the background colour of the header
 		'radio_field',
 		'Options for the Background colour of the Header',
 		'radio_field_render',
@@ -28,7 +27,7 @@ function settings_init() {
 		'options_page_section'
 	);
 
-	add_settings_field(
+	add_settings_field( // A custom field to change font style of all Paragraph on the website
 		'radio2_field',
 		'Options for Paragraph Font',
 		'radio2_field_render',
@@ -36,7 +35,7 @@ function settings_init() {
 		'options_page_section'
 	);
 
-	add_settings_field(
+	add_settings_field( // A custom field to change the font size of all Paragraph on the webstie
 		'select_field',
 		'Options for the Paragraph Font Size',
 		'select_field_render',
@@ -44,7 +43,7 @@ function settings_init() {
 		'options_page_section'
 	);
 
-	function radio_field_render() {
+	function radio_field_render() { // Funciton to add in the options users will have on WP
 		$options = get_option( 'options_settings' );
 		?>
 		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 1 ); ?> value="#83A7BC" /> <label>Defaut Colour</label><br />
@@ -53,7 +52,7 @@ function settings_init() {
 		<input type="radio" name="options_settings[radio_field]" <?php if (isset($options['radio_field'])) checked( $options['radio_field'], 4 ); ?> value="#E99CCE" /> <label>Kate Pink</label>
 		<?php
 	}
-	function radio2_field_render() {
+	function radio2_field_render() { // Funciton to add in the options users will have on WP
 		$options = get_option( 'options_settings' );
 		?>
 		<input type="radio" name="options_settings[radio2_field]" <?php if (isset($options['radio2_field'])) checked( $options['radio2_field'], 1 ); ?> value="sans-serif;" /> <label>Default Font</label><br />
@@ -63,7 +62,7 @@ function settings_init() {
 		<?php
 	}
 
-	function select_field_render() {
+	function select_field_render() { // Funciton to add in the options users will have on WP
 		$options = get_option( 'options_settings' );
 		?>
 		<select name="options_settings[select_field]">
@@ -75,7 +74,7 @@ function settings_init() {
 	<?php
 	}
 
-	function my_theme_options_page(){
+	function my_theme_options_page(){ // Function to apply the changes of the options user has selected on the options page.
 		?>
 		<form action="options.php" method="post">
 			<h2>Options Page For Portfolio (Assignment 1)</h2>

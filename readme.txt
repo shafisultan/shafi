@@ -36,3 +36,14 @@ shafi includes support for Infinite Scroll in Jetpack.
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+
+== INSTRUCTIONs on the Edits and Functionality added to the Theme ==
+
+== Options Page ==
+1. Go to the options page settings in WordPress dashboard
+2. There, one can change the background colour of the header
+3. Change the font size of all paragraphs on the website
+4. Chang the font style of all paragraphs on the website
+
+== Homepage 'Latest Projects' ==
+Users can get featured post to appear on the homepage by adding them in the projects category.
