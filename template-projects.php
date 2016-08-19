@@ -13,7 +13,7 @@ get_header(); ?>
 		<!-- Custom style from options page -->
 		<style>
 		p {
-				 font-size: <?php echo $options['select_field']; ?>
+				 font-size: <?php echo $options['select_field']; // Adding the option to the font size of paragraphs that appear on the tempalte page I created for the home page ?>
 		 }
 		</style>
 
@@ -21,7 +21,7 @@ get_header(); ?>
 				<!-- Custom style from options page -->
 				<style>
 				p {
-						 font-family: <?php echo $options['radio2_field']; ?>
+						 font-family: <?php echo $options['radio2_field'];// Adding the option to the font of paragraphs that appear on the tempalte page I created for the home page ?>
 				 }
 				</style>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 <H2>Latest Projects</h2>
 	<?php
-				//custom Quear to show 4 posts from one specific category (Projects) on the static homepage of my site.
+				//custom quear to show 4 posts from one specific category (Projects) on the tamplate-page homepage of my site.
 			$args = array('showposts' => 4, 'category_name' => 'Projects');
 				$my_query = new WP_Query($args); ?>
 			<?php //	WP Query to show posts on this static homepage

@@ -17,7 +17,7 @@
 		<!-- Footer Menu -->
 		<div id="social">
 			<?php if ( has_nav_menu( 'social' ) ) {
-				wp_nav_menu(
+				wp_nav_menu( // Adding a social media menu to link to my socail media acccounts.
 					array(
 						'theme_location'  => 'social',
 						'container'       => 'div',
@@ -32,7 +32,7 @@
 					)
 				);
 			} ?>
-		</div> <!-- End Footer Menu -->
+		</div> <!-- End Social media Footer Menu -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shafi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shafi' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
@@ -43,7 +43,7 @@
 	}
 	?>
 	<aside id="secondary" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		<?php dynamic_sidebar( 'sidebar-1' ); ?> <!-- Getting the sidebar to show in the footer instead of on the side of the website -->
 	</aside><!-- #secondary -->
 		</aside><!-- #secondary -->
 	</footer><!-- #colophon -->

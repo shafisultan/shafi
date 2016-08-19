@@ -41,7 +41,7 @@ function shafi_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'thumb', 600, 600, true ); //600 pixels wide (and unlimited height)
+	add_image_size( 'thumb', 600, 600, true ); //600 by 600 pixels and the 'true' is to adjus the cropping of the feature images to ratio of the image
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -86,7 +86,7 @@ add_action( 'after_setup_theme', 'shafi_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function shafi_widgets_init() {
+function shafi_widgets_init() { // sidebar that I'm getting to appear in my footer.
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'shafi' ),
 		'id'            => 'sidebar-1',
@@ -104,14 +104,13 @@ add_action( 'widgets_init', 'shafi_widgets_init' );
  */
 function shafi_scripts() {
 	wp_enqueue_style( 'shafi-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'colourpage', get_stylesheet_uri() . '/inc/css/style-blue.css');
 
+	// Enqueue Google fonts to use for my website.
 	wp_enqueue_style( 'indie-fonts','https://fonts.googleapis.com/css?family=Indie+Flower|Monoton' );
 	wp_enqueue_style( 'monoton-font', 'https://fonts.googleapis.com/css?family=Monoton' );
 	wp_enqueue_style( 'raleway-font', 'https://fonts.googleapis.com/css?family=Raleway' );
 	wp_enqueue_style( 'londrina-font', 'https://fonts.googleapis.com/css?family=Londrina+Outline' );
 	wp_enqueue_style( 'amatic-font', 'https://fonts.googleapis.com/css?family=Amatic+SC' );
-
 
 	wp_enqueue_script( 'shafi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -149,28 +148,12 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/**
- * Enqueuing Google Fonts
- * Reference: http://www.wpbeginner.com/wp-themes/how-add-google-web-fonts-wordpress-themes/
- */
-
-	//add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 /**
-	* Secondary menu that appear in the footer
+	* Secondary socail media menu that appear in the footer
 	*/
-	register_nav_menus( array(
+	register_nav_menus( array( // Regitering the social media menu
 	 'social' => __( 'Social Menu', 'Social Menu' ),
 	) );
 
-	require get_stylesheet_directory() . '/inc/options.php';
-
-	/**
-		* Trying to add thumnail images to post and function as links to them
-		* Reference - https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-	function my_post_image_html( $html, $post_id, $post_image_id ) {
-	  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
-	  return $html;
-	}
-	add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+	require get_stylesheet_directory() . '/inc/options.php'; // registering the options file here to work with my WP theme

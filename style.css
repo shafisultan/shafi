@@ -44,6 +44,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+DISCLAIMER: All of the images used are my own unless otherwise stated.
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 
@@ -655,33 +659,6 @@ a:active {
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-/* Text meant only for screen readers. */
-/* .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
- .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-/* } */
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
@@ -903,43 +880,46 @@ object {
 }
 
 /*--------------------------------------------------------------
-## Changes added or edits made by myself.
+## Changes added or edits made by Shafi Sultan.
 --------------------------------------------------------------*/
-#page {
+#page { /* Changing the width of the page where the content is contained */
 	width: 59.375em;
 	margin: auto;
 }
-#masthead {
+#masthead { /* Giving the Header a background colour, margins and lowering the opacity. */
 	background: #83A7BC;
 	margin: 2em;
 	opacity: 0.9;
 }
-#content {
+#content { /* Adding a backgorround colour to the content area (same colour as header)
+	and adding amrgins, padding and lowering the opacity */
 	background: #83A7BC;
 	margin: 2em;
 	padding: 1em;
 	opacity: 0.9;
 }
-#colophon {
+#colophon { /* adding a background colour to the footer (same as content and header), padding and lowering the opacity */
 	background: #83A7BC;
 	padding-top: 1em;
 	opacity: 0.9;
 }
 
-.site-title {
+.site-title { /* Changing the Title font, size and alignment */
 	font-family: 'Monoton', cursive;
 	font-size: 2.2em;
 	margin-bottom: 0;
 	text-align: left;
 }
 
-.site-description {
+.site-description { /* Changing the site description/sub heading font, size and alognment. */
 	font-size: 1.2em;
 	margin-top: 0;
 	text-align: left;
 	font-family: 'Indie Flower', cursive;
 }
 
+/* Source of these edits is Code Diva Fang Master theme - Adding a social menue in the footer and connecting them to
+Font Awesome, tried everything to get the Font Awesome to work but for my site it just simply did not work . */
 #social ul {
 	list-style-type: none;
 	float: left;
@@ -949,11 +929,6 @@ object {
 #social ul li {
 	display: inline-block;
 	float: left;
-	padding-right: 1em;
-}
-
-.site-info {
-	float: right;
 	padding-right: 1em;
 }
 #social li a{
@@ -971,42 +946,28 @@ object {
 #social li a:before:hover{
 	 color: #C3C3C3;
 }
-/* #social li a[href*="facebook.com"]:before{
-	content:'\f09a';
-}
-#social li a[href*="twitter.com"]:before{
-	content:'\f099';
-}
-#social li a[href*="instagram.com"]:before{
-	content:'\f16d';
+/* End of Social media menu edits */
+
+.site-info { /* Aligning the Underscores giving site information to rgiht and adding padding to only the right side */
+	float: right;
+	padding-right: 1em;
 }
 
-#social li a[href*="linkedin.com"]:before{
-	content:'\f0e1';
-} */
-
-/* #primary {
-	float:left;
-	margin-bottom:2em;
-	width: 26.6667%;
-}
-#primary aside {
-	width: inherit;
-} */
-.blog article {
+.blog article { /* This for the grid layout in the projects page. To turn my WP posts to be displayed in a grid style
+	layout. Two colums laying styling. */
 	float: left;
 	margin: 2em;
 	width: 42%;
-	background-color: white;
 	text-align: center;
-	/*	clear: both; - This is the be used whe optimizing for mobile use */
 }
 .blog article aside {
 	width: inherit;
 }
+/* End of the WP post grid layout styling */
 
 /*--------------------------------------------------------------
-## Edits for Responsiveness
+## Edits for Responsiveness - Changing all of the pixel properties to either ems or percentages
+to adopt to different screen sizes.
 --------------------------------------------------------------*/
 #page {
 	margin: 3em auto;
@@ -1053,6 +1014,8 @@ object {
 #site-navigation a:hover {
   color: #f2add3;
 }
+/* End of the menu responsiveness */
+
 .site-branding {
 	text-align: center;
 	width: 40em;
@@ -1068,23 +1031,23 @@ object {
 	text-align: justify;
 }
 
-
-@media only screen and (max-width: 900px){
-
+/*--------------------------------------------------------------
+## Adding media queries for specific styles and responsivenes to different screeen sizes.
+--------------------------------------------------------------*/
+@media only screen and (max-width: 900px){ /* Edits for Tablet size screens */
 	.blog article {
 		float: left;
 		margin: 2em;
 		width: 40%;
 		background-color: white;
 		text-align: center;
-		/*	clear: both; - This is the be used whe optimizing for mobile use */
 	}
 	.blog article aside {
 		width: inherit;
 		position: relative;
 	}
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px){ /* Edits for smartphone size screens */
 	.project-posts {
 		float: left;
 		width: 100%;
@@ -1093,3 +1056,5 @@ object {
 		text-align: center;
 		clear: both; - This is the be used whe optimizing for mobile use */
 	}
+
+/* End of media queries edits */

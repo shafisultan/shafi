@@ -18,17 +18,16 @@ get_header(); ?>
 		<!-- Custom style from options page -->
 		<style>
 		p {
-				 font-size: <?php echo $options['select_field']; ?>
+				 font-size: <?php echo $options['select_field']; // Adding the option to the font size of paragraphs that appear on the iondex page?>
 		 }
 		</style>
-		
-		<?php $options=get_option( 'options_settings' ); ?>
+<?php $options=get_option( 'options_settings' ); ?>
 				<!-- Custom style from options page -->
-				<style>
-				p {
-						 font-family: <?php echo $options['radio2_field']; ?>
-				 }
-				</style>
+		<style>
+			p {
+				font-family: <?php echo $options['radio2_field']; // Adding the option to the font of paragraphs that appear on the index page ?>
+				}
+		</style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

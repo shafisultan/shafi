@@ -17,7 +17,7 @@ get_header(); ?>
 		<!-- Custom style from options page -->
 		<style>
 		p {
-				 font-size: <?php echo $options['select_field']; ?>
+				 font-size: <?php echo $options['select_field']; // Adding the option to the font size of paragraphs that appear on all pages of the website ?>
 		 }
 		</style>
 
@@ -25,7 +25,7 @@ get_header(); ?>
 				<!-- Custom style from options page -->
 				<style>
 				p {
-						 font-family: <?php echo $options['radio2_field']; ?>
+						 font-family: <?php echo $options['radio2_field']; // Adding the option to the font of paragraphs that appear on all pages of the website ?>
 				 }
 				</style>
 
