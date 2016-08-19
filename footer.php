@@ -38,6 +38,14 @@
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shafi' ), 'shafi', '<a href="https://www.theindividualist.me" rel="designer">Shafi Sultan</a>' ); ?>
 		</div><!-- .site-info -->
+	<?php	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		return;
+	}
+	?>
+	<aside id="secondary" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</aside><!-- #secondary -->
+		</aside><!-- #secondary -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
